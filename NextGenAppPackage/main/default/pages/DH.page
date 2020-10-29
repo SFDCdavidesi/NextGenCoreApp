@@ -1,0 +1,41 @@
+<apex:page controller="DHController" docType="html-5.0" >
+    
+<apex:form >
+    <apex:actionFunction name="invoke" action="{!submitQuery}" rerender="mainBlock,results"/>
+<apex:pageBlock id="mainBlock" title="cities">
+<apex:pageBlockButtons >
+<apex:commandButton value="Dale" action="{!submitQuery}" reRender="results" />
+</apex:pageBlockButtons>
+<apex:pageblockSection title="pbs1"  columns="2">
+<apex:pageBlockSectionItem >Country:</apex:pageBlockSectionItem>
+<apex:pageblockSectionItem >
+<apex:inputtext value="{!country}" list="{!countries}" id="countryField" onKeyUp="invoke();" >
+    
+    </apex:inputtext>
+</apex:pageblockSectionItem>
+<apex:pageBlockSectionItem >State:</apex:pageBlockSectionItem>
+<apex:pageblockSectionItem >
+<apex:inputtext value="{!state}" list="{!states}" onKeyUp="invoke();"/>
+</apex:pageblockSectionItem>
+<apex:pageBlockSectionItem >City:</apex:pageBlockSectionItem>
+<apex:pageblockSectionItem >
+<apex:inputtext value="{!city}" list="{!cities}" onKeyUp="invoke();"/>
+</apex:pageblockSectionItem>
+
+</apex:pageblockSection>
+
+
+</apex:pageBlock>
+    <apex:pageBlock id="results" >
+        <apex:pageBlockTable value="{!countries}" var="n">
+            <apex:column value="{!n}"/>
+        </apex:pageBlockTable>
+<apex:pageBlockTable value="{!states}" var="n">
+            <apex:column value="{!n}"/>
+        </apex:pageBlockTable>      
+<apex:pageBlockTable value="{!cities}" var="n">
+            <apex:column value="{!n}"/>
+        </apex:pageBlockTable>        
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

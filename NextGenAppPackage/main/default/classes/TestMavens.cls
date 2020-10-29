@@ -1,0 +1,16 @@
+public with sharing class TestMavens {
+
+	private final sObject mysObject;
+
+    // The extension constructor initializes the private member
+    // variable mysObject by using the getRecord method from the standard
+    // controller.
+    public TestMavens(ApexPages.StandardController stdController) {
+        this.mysObject = (sObject)stdController.getRecord();
+        System.debug('Anydatatype_msg');
+    }
+
+    public String getRecordName() {
+        return 'Hello ' + (String)mysObject.get('name') + ' (' + (Id)mysObject.get('Id') + ')';
+    }
+}

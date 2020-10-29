@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name_does_not_contain_Yaveh</fullName>
+    <active>true</active>
+    <errorConditionFormula>and( $Setup.Run_Validation__c.Execute_validation__c ,
+ CONTAINS(  Name,&quot;YAVEH&quot; )
+)</errorConditionFormula>
+    <errorMessage>You can not use Yaveh in the name of an account</errorMessage>
+</ValidationRule>

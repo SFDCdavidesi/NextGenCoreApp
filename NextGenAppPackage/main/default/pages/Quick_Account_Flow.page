@@ -1,0 +1,5 @@
+<apex:page >
+
+   <flow:interview name="QUICK_ACCOUNT" />
+
+</apex:page>

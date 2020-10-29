@@ -1,0 +1,15 @@
+<apex:page controller="PollingClass">
+    
+    <apex:form >
+        <apex:outputPanel id="contador">
+        
+        <apex:outputText id="c" value="contador: {!i}">
+<apex:actionSupport event="onmouseover" action="{!incrementCounter}" rerender="contador"/>
+        
+        
+        </apex:outputText>
+        </apex:outputPanel>
+    
+    
+    </apex:form>
+</apex:page>

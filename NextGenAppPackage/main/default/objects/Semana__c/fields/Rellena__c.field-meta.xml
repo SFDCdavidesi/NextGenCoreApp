@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rellena__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>el menú semanal ha sido complertado</description>
+    <externalId>false</externalId>
+    <label>Rellena</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

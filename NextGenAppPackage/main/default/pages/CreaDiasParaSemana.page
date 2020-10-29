@@ -1,0 +1,5 @@
+<apex:page standardController="Semana__c">
+<flow:interview name="Rellena_Semana" finishLocation="/{!Semana__c.id}" >
+<apex:param name="semanaId" value="{!Semana__c.id}"/>
+</flow:interview>
+</apex:page>

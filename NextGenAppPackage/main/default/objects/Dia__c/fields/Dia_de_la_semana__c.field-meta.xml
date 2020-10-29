@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dia_de_la_semana__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( MOD(  Fecha__c  - DATE(1900, 1, 7), 7), 0, &quot;Domingo&quot;, 1, &quot;Lunes&quot;, 2, &quot;Martes&quot;, 3,
+&quot;Miércoles&quot;, 4, &quot;Jueves&quot;, 5, &quot;Viernes&quot;, 6, &quot;Sábado&quot;,&quot;Error&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Dia de la semana</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
